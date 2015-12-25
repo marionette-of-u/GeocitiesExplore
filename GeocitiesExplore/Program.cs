@@ -33,17 +33,29 @@ namespace GeocitiesExplore
 
         static string[] communityArray =
         {
+            "Outdoors",
+            "Athlete",
+            "AnimalPark",
+            "AnimeComic",
             "WallStreet",
-            "EpicureanTable",
-            "Colosseum",
+            "CollegeLife",
             "SiliconValley",
             "SilkRoad",
+            "SweetHome",
+            "Stylish",
             "Technopolis",
-            "Berkeley",
-            "Heartland",
-            "Hollywoodv",
+            "NatureLand",
+            "NeverLand",
+            "HeartLand",
+            "HiTeens",
+            "PowderRoom",
+            "Hollywood",
+            "Beautycare",
+            "Foodpia",
+            "Bookend",
             "Playtown",
-            "Broadway",
+            "MusicStar",
+            "MusicHall",
             "Milano",
             "Milkyway",
             "MotorCity"
@@ -54,7 +66,12 @@ namespace GeocitiesExplore
         {
             if (args.Length < 3 || args.Length > 4)
             {
-                Console.Write("usage: geoexplore community n m [--nohtml]\n- community\n0   WallStreet\n1   EpicureanTable\n2   Colosseum\n3   SiliconValley\n4   SilkRoad\n5   Technopolis\n6   Berkeley\n7   Heartland\n8   Hollywood\n9   Playtown\n10  Broadway\n11  Milano\n12  Milkyway\n13  MotorCity\n\n- n, m\n1000~9999\n");
+                string communityList = "";
+                for (int i = 0; i < communityArray.Length; ++i)
+                {
+                    communityList += i.ToString() + "    " + communityArray[i] + "\n";
+                }
+                Console.Write("usage: geoexplore community n m [--nohtml]\n- community{0}\n- n, m\n1000~9999\n", communityList);
                 return;
             }
             
