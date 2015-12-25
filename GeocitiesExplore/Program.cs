@@ -71,7 +71,7 @@ namespace GeocitiesExplore
                 {
                     communityList += i.ToString() + "    " + communityArray[i] + "\n";
                 }
-                Console.Write("usage: geoexplore community n m [--nohtml]\n- community{0}\n- n, m\n1000~9999\n", communityList);
+                Console.Write("usage: geoexplore community n m [--nohtml]\n- community\n{0}\n- n, m\n1000~9999\n", communityList);
                 return;
             }
             
@@ -206,7 +206,10 @@ namespace GeocitiesExplore
                 load();
             }
         </script>
-        <title>WallStreet 1000 - 3000</title>
+        <title>"
+                    );
+                    htmlFile.Write(communityArray[communityNum] + " " + addressN.ToString() + "-" + addressM.ToString() +
+ @"</title>
     </head>
     <body onload='init();'>
         <button onclick='prev();'>prev</button> <button onclick='next();'>next</button>
